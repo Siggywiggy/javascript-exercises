@@ -5,7 +5,7 @@ const sumAll = function(num_1, num_2) {
     // check for non-integers 
     } else if (!Number.isSafeInteger(num_1) ||!Number.isSafeInteger(num_2)){
         return "ERROR";
-    // check for non-numbers like strings
+    // check for non-numbers like strings that cant be onverted to numbers
     } else if ((Number(num_1) === NaN) || (Number(num_2) === NaN)) {
         return "ERROR";
     //  check for non-numbers like arrays
