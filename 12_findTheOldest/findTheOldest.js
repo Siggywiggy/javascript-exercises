@@ -1,7 +1,8 @@
 const findTheOldest = function(people) {
     //console.log(people);
-    const findTheOldest = people.reduce((accumulator, currPerson) => {
-        
+    return people.reduce((accumulator, currPerson) => {
+        // nothing in the accumulator at the start of reduce()
+        // put first array item in to accumulator
         if (Object.keys(accumulator).length ===0) {
             return currPerson;
         };
@@ -25,23 +26,23 @@ const findTheOldest = function(people) {
             accumulatorAge = accumulator.yearOfDeath - accumulator.yearOfBirth;
         }
 
-        console.log(`current - ${currPerson.name} : ${currAge} - accumulator - ${accumulator.name} : ${accumulatorAge}`)
+        //console.log(`current - ${currPerson.name} : ${currAge} - accumulator - ${accumulator.name} : ${accumulatorAge}`)
         // compare ages and return the oldest to the accumulator
         if (currAge > accumulatorAge) {
-            console.log(`returning currPerson ${currPerson.name}`);
+            //console.log(`returning currPerson ${currPerson.name}`);
             return currPerson;
 
         } else if (currAge < accumulatorAge) {
-            console.log(`returning accumulator ${accumulator.name}`);
+            //console.log(`returning accumulator ${accumulator.name}`);
             return accumulator;
         } else {
-            console.log(`returning accumulator ${accumulator.name}`);
+            //console.log(`returning accumulator ${accumulator.name}`);
             return accumulator;
         }
     })
 };
 
-
+/*
 const people = [
     {
       name: "Carly",
@@ -63,7 +64,7 @@ const people = [
 oldest_person = findTheOldest(people)
 
 //console.log(oldest_person.name);
-
+*/
 
 // Do not edit below this line
 module.exports = findTheOldest;
