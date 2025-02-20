@@ -1,12 +1,6 @@
 const findTheOldest = function(people) {
     //console.log(people);
     return people.reduce((accumulator, currPerson) => {
-        // nothing in the accumulator at the start of reduce()
-        // put first array item in to accumulator
-        if (Object.keys(accumulator).length ===0) {
-            return currPerson;
-        };
-
         let currAge = new Number();
         let accumulatorAge = new Number();
         const currYear = new Date().getFullYear();
